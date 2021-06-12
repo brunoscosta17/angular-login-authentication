@@ -1,1 +1,8 @@
-<p>login works!</p>
+<h1 class="h4 mb-3">Login</h1>
+<app-login-form
+    [formLoading]="formLoading"
+    (formSubmit)="handleFormSubmit($event)">
+</app-login-form>
+<div class="text-center mt-3">
+    <a routerLink="/admin/password-reset" class="text-dark">Redefine my password</a>
+</div>
