@@ -24,15 +24,16 @@ export class LoginComponent {
 
         handleFormSubmit(value: Login): void {
         console.log(value);
-        // this.genericService.post('login', value)
-        //     .subscribe((response) => {
-        //         this.authService.setToken(response.data.access_token, value.rememberMe);
-        //         alert('Login successfull!');
-        //         this.router.navigate(['dashboard']);
-        //     }, (error) => {
-        //         this.eventSubject.next('enable');
-        //         alert('Wrong login!');
-        //     });
+        this.genericService.post('user/signin', value)
+            .subscribe((response) => {
+                console.log(response);
+                this.authService.setToken(response.access_token, value.rememberMe);
+                alert('Login successfull!');
+                this.router.navigate(['dashboard']);
+            }, (error) => {
+                this.eventSubject.next('enable');
+                alert('Wrong login!');
+            });
     }
 
 }

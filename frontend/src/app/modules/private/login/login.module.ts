@@ -3,27 +3,29 @@ import { CommonModule } from "@angular/common";
 import { ReactiveFormsModule } from "@angular/forms";
 
 // modules
-import { PublicModule } from "../public/public.module";
-import { LoginModule } from "./login/login.module";
 import { SharedModule } from "src/app/shared/shared.module";
-import { PrivateRoutingModule } from "./private-routing.module";
+import { LoginRoutingModule } from "./login-routing.module";
 
 // containers
-import { PrivateComponent } from "./private.component";
+import { LoginComponent } from "./containers/login/login.component";
 
+// components
+import { LoginFormComponent } from "./components/login-form/login-form.component";
+
+// components
 
 @NgModule({
     declarations: [
         // containers
-        PrivateComponent,
+        LoginComponent,
+        // components
+        LoginFormComponent
     ],
     imports: [
         CommonModule,
         ReactiveFormsModule,
-        PrivateRoutingModule,
         SharedModule,
-        PublicModule,
-        LoginModule,
+        LoginRoutingModule
     ]
 })
-export class PrivateModule { }
+export class LoginModule { }

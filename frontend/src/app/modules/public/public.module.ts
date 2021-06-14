@@ -4,25 +4,14 @@ import { PublicRoutingModule } from "./public-routing.module";
 import { ReactiveFormsModule } from "@angular/forms";
 
 // containers
-import { LoginComponent } from "./containers/login/login.component";
-import { PasswordResetComponent } from "./containers/password-reset/password-reset.component";
-
-// components
-import { LoginFormComponent } from "./components/login-form/login-form.component";
-import { PasswordResetFormComponent } from "./components/password-reset-form/password-reset-form.component";
-import { DashboardComponent } from './containers/dashboard/dashboard.component';
+import { PublicComponent } from "./public.component";
 
 // components
 
 @NgModule({
     declarations: [
         // containers
-        LoginComponent,
-        PasswordResetComponent,
-        // components
-        LoginFormComponent,
-        PasswordResetFormComponent,
-        DashboardComponent
+        PublicComponent
     ],
     imports: [
         CommonModule,
