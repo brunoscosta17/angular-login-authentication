@@ -12,12 +12,10 @@ const routes: Routes = [
         path: '', component: HomeComponent,
     },
     {
-        path: 'login',
+        path: 'admin',
         loadChildren: () => import('src/app/modules/private/private.module').then(m => PrivateModule),
     },
-    {
-        path: '**', redirectTo: '', pathMatch: 'full'
-    }
+    { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
 @NgModule({

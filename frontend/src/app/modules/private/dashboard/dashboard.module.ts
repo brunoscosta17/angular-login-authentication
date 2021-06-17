@@ -4,28 +4,25 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 // modules
 import { SharedModule } from 'src/app/shared/shared.module';
-import { LoginRoutingModule } from './login-routing.module';
+import { DashboardRoutingModule } from './dashboard-routing.module';
 
 // containers
-import { LoginComponent } from './containers/login/login.component';
-
-// components
-import { LoginFormComponent } from './components/login-form/login-form.component';
+import { DashboardComponent } from './dashboard.component';
 
 // components
 
 @NgModule({
     declarations: [
         // containers
-        LoginComponent,
+        DashboardComponent
         // components
-        LoginFormComponent,
+
     ],
     imports: [
         CommonModule,
         ReactiveFormsModule,
         SharedModule,
-        LoginRoutingModule
+        DashboardRoutingModule
     ]
 })
-export class LoginModule { }
+export class DashboardModule { }

@@ -29,7 +29,7 @@ export class LoginComponent {
                 console.log(response);
                 this.authService.setToken(response.access_token, value.rememberMe);
                 alert('Login successfull!');
-                this.router.navigate(['dashboard']);
+                this.router.navigate(['admin/dashboard']);
             }, (error) => {
                 this.eventSubject.next('enable');
                 alert('Wrong login!');

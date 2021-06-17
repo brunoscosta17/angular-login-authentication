@@ -1,17 +1,17 @@
-import { NgModule } from "@angular/core";
-import { RouterModule, Routes } from "@angular/router";
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
 // containers
-import { PasswordResetComponent } from "./containers/password-reset/password-reset.component";
+import { LoginComponent } from 'src/app/modules/private/login/containers/login/login.component';
 
 const routes: Routes = [
-    { path: '', component: PasswordResetComponent }
-]
+    { path: '', component: LoginComponent },
+];
 
 @NgModule({
     imports: [RouterModule.forChild(routes)],
     exports: [RouterModule]
 })
-export class PasswordResetRoutingModule {
+export class LoginRoutingModule {
 
 }

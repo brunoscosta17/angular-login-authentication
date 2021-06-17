@@ -17,17 +17,17 @@ router.get('/', (req, res) => {
 
 router.post('/signin', (req, res) => {
     console.log(req.body);
-    const { userName, password } = req.body;
+    const { email, password } = req.body;
     mysqlConnection
-        .query('SELECT * FROM user WHERE userName=? AND password=?',
-        [userName, password],
+        .query('SELECT * FROM user WHERE email=? AND password=?',
+        [email, password],
         (error, rows, field) => {
             if(!error) {
                 console.log(rows);
                 if(rows.length > 0) {
                     let data = JSON.stringify(rows[0]);
                     const token = jwt.sign(data, 'stil');
-                    res.json({ token });
+                    res.json({ access_token: token });
                 } else {
                     res.json('User incorrect or does not exists!');
                 }
