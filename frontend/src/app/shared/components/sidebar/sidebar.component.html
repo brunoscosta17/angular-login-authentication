@@ -1,15 +1,15 @@
 <!-- As a heading -->
-<nav class="navbar navbar-light bg-light shadow ">
+<!-- <nav class="navbar navbar-light bg-light shadow ">
     <div class="container-fluid">
         <span class="navbar-brand mb-0 h1">Navbar</span>
         <button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
             <span class="navbar-toggler-icon"></span>
         </button>
     </div>
-</nav>
+</nav> -->
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-fullscreen">
         <div class="modal-content">
             <div class="modal-header">
@@ -28,6 +28,55 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
+        </div>
+    </div>
+</div> -->
+<div class="wrapper">
+    <nav class="sidebar" [ngClass]="status ? 'active' : 'inactive'">
+        <div class="sidebar-header">
+             <h2>Sidebar</h2>
+        </div>
+        <ul class="list-unstyled components">
+            <!-- <p>The providers</p> -->
+            <!-- <li class="active">
+                <a routerLink="/home" routerLinkActive="router-link-active" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+            </li> -->
+            <li>
+                <a routerLink="home" routerLinkActive="router-link-active" ><fa-icon [icon]="faHome" class="icon"></fa-icon>Home</a>
+            </li>
+            <li>
+                <a routerLink="products" routerLinkActive="router-link-active" ><fa-icon [icon]="faToolbox" class="icon"></fa-icon>Products</a>
+            </li>
+            <li>
+                <a routerLink="about" routerLinkActive="router-link-active" ><fa-icon [icon]="faIdCard" class="icon"></fa-icon>About us</a>
+            </li>
+            <li>
+                <a routerLink="contact" routerLinkActive="router-link-active" ><fa-icon [icon]="faPhoneVolume" class="icon"></fa-icon>Contact us</a>
+            </li>
+        </ul>        
+    </nav>
+    <div class="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <button type="button" id="sidebarCollapse" class="btn btn-info" (click)="toggle()">
+                    <fa-icon [icon]="faAlignLeft"></fa-icon>
+                    <span>Toggle sidebar</span>
+                </button>
+            </div>
+        </nav>
+        <br><br>
+        <h2>Collapsable Sidebar using Bootstrap</h2>
+        <p>
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+        </p>
+        <p>
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+        </p>
+        <div class="line">
+            <p>Lorem ipsum</p>
+            <p>
+                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+            </p>
         </div>
     </div>
 </div>
