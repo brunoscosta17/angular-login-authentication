@@ -9,7 +9,6 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     SidebarComponent],
     imports: [
         CommonModule,
-        // modules
         FormsModule,
         ReactiveFormsModule,
         FontAwesomeModule

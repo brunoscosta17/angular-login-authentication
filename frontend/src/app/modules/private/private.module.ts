@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // modules
 import { PublicModule } from '../public/public.module';
@@ -23,6 +23,7 @@ import { SidebarComponent } from 'src/app/shared/components/sidebar/sidebar.comp
     ],
     imports: [
         CommonModule,
+        FormsModule,
         ReactiveFormsModule,
         PrivateRoutingModule,
         SharedModule,

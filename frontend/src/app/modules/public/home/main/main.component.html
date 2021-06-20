@@ -278,12 +278,14 @@
                     <div class="col-lg-7">
                         <div class="row">
                             <div class="col-lg-6">
-                                <input type="text" class="form-control" formControlName="firstName"
-                                bg-light placeholder="First Name">
-                            </div>
-                            <div class="col-lg-6">
-                                <input type="text" class="form-control" formControlName="lastName"
-                                bg-light placeholder="Last Name">
+                                <form [formGroup]="form">                                    
+                                    <input type="text" class="form-control" formControlName="firstName"
+                                    bg-light placeholder="First Name">
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control" formControlName="lastName"
+                                        bg-light placeholder="Last Name">
+                                    </div>
+                                </form>
                             </div>
                         </div>
                         <div class="row">

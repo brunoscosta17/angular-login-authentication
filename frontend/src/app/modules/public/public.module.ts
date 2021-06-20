@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PublicRoutingModule } from './public-routing.module';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // containers
 import { PublicComponent } from './public.component';
@@ -26,6 +26,8 @@ import { FooterComponent } from './home/footer/footer.component';
     ],
     imports: [
         CommonModule,
+        FormsModule,
+        ReactiveFormsModule,
         PublicRoutingModule,
         // modules
         ReactiveFormsModule
