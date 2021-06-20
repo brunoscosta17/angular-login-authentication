@@ -7,8 +7,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { PublicComponent } from './public.component';
 
 // components
-import { HeaderComponent } from './home/header/header.component';
 import { HomeComponent } from './home/home.component';
+import { HeaderComponent } from './home/header/header.component';
+import { MainComponent } from './home/main/main.component';
+import { FooterComponent } from './home/footer/footer.component';
 
 // components
 
@@ -18,7 +20,9 @@ import { HomeComponent } from './home/home.component';
         PublicComponent,
         // components
         HomeComponent,
-        HeaderComponent
+        HeaderComponent,
+        MainComponent,
+        FooterComponent
     ],
     imports: [
         CommonModule,
