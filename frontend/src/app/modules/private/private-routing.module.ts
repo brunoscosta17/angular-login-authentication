@@ -14,17 +14,14 @@ const routes: Routes = [
         component: PrivateComponent,
         children: [
             { path: '', component: LoginComponent },
+            { path: 'password-reset', component: PasswordResetComponent },
+            {
+                path: 'dashboard',
+                loadChildren: () => import('src/app/modules/private/dashboard/dashboard.module').then(m => m.DashboardModule),
+            },
+            { path: '**', redirectTo: 'admin', pathMatch: 'full' }
         ]
     },
-    { path: 'password-reset', component: PasswordResetComponent },
-    {
-        path: 'dashboard',
-        loadChildren: () => import('src/app/modules/private/dashboard/dashboard.module').then(m => m.DashboardModule),
-    },
-    // {
-    //     path: 'header',
-    //     loadChildren: () => import('src/app/modules/private/dashboard/components/header/header.module').then(m => m.DashboardModule),
-    // },
 ];
 
 @NgModule({

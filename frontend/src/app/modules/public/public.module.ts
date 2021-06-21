@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './home/header/header.component';
 import { MainComponent } from './home/main/main.component';
 import { FooterComponent } from './home/footer/footer.component';
+import { PrivateRoutingModule } from '../private/private-routing.module';
 
 // components
 
@@ -29,8 +30,9 @@ import { FooterComponent } from './home/footer/footer.component';
         FormsModule,
         ReactiveFormsModule,
         PublicRoutingModule,
+        PrivateRoutingModule,
         // modules
-        ReactiveFormsModule
+        ReactiveFormsModule,
     ]
 })
 export class PublicModule { }

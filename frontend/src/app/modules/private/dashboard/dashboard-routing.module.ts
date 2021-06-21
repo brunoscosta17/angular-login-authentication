@@ -3,9 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { DashboardComponent } from './dashboard.component';
 import { HeaderComponent } from './components/header/header.component';
+import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
-    { path: 'home', component: DashboardComponent },
+    { path: 'home', component: HomeComponent },
     { path: 'header', component: HeaderComponent },
 ];
 

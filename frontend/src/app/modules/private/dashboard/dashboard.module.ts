@@ -10,6 +10,7 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
+import { SidebarComponent } from 'src/app/shared/components/sidebar/sidebar.component';
 
 // components
 
@@ -18,7 +19,7 @@ import { HeaderComponent } from './components/header/header.component';
         // containers
         DashboardComponent,
         HomeComponent,
-        HeaderComponent
+        HeaderComponent,
         // components
 
     ],
@@ -27,7 +28,7 @@ import { HeaderComponent } from './components/header/header.component';
         FormsModule,
         ReactiveFormsModule,
         SharedModule,
-        DashboardRoutingModule
+        DashboardRoutingModule,
     ]
 })
 export class DashboardModule { }
