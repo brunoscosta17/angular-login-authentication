@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // modules
 import { SharedModule } from 'src/app/shared/shared.module';
 import { DashboardRoutingModule } from './dashboard-routing.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 // containers
 import { DashboardComponent } from './dashboard.component';
@@ -29,6 +30,7 @@ import { SidebarComponent } from 'src/app/shared/components/sidebar/sidebar.comp
         ReactiveFormsModule,
         SharedModule,
         DashboardRoutingModule,
+        FontAwesomeModule
     ]
 })
 export class DashboardModule { }

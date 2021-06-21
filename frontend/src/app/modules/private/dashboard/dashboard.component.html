@@ -1,2 +1,35 @@
-<app-sidebar></app-sidebar>
-<router-outlet></router-outlet>
+<div class="wrapper">
+    <nav class="sidebar" [ngClass]="status ? 'active' : 'inactive'">
+        <div class="sidebar-header">
+             <h2>ADMIN</h2>
+        </div>
+        <ul class="list-unstyled components">
+            <li>
+                <a routerLink="home" routerLinkActive="router-link-active" ><fa-icon [icon]="faHome" class="icon"></fa-icon>Home</a>
+            </li>
+            <li>
+                <a routerLink="header" routerLinkActive="router-link-active" ><fa-icon [icon]="faToolbox" class="icon"></fa-icon>Header</a>
+            </li>
+            <li>
+                <a routerLink="about" routerLinkActive="router-link-active" ><fa-icon [icon]="faIdCard" class="icon"></fa-icon>About us</a>
+            </li>
+            <li>
+                <a routerLink="contact" routerLinkActive="router-link-active" ><fa-icon [icon]="faPhoneVolume" class="icon"></fa-icon>Contact us</a>
+            </li>
+        </ul>        
+    </nav>
+    <div class="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <button type="button" id="sidebarCollapse" class="btn btn-primary" (click)="toggle()">
+                    <fa-icon [icon]="faAlignLeft"></fa-icon>
+                    <span> Toggle sidebar</span>
+                </button>
+            </div>
+        </nav>
+        <br><br>
+
+        <router-outlet></router-outlet>
+        
+    </div>
+</div>

@@ -6,8 +6,14 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
-    { path: 'home', component: HomeComponent },
-    { path: 'header', component: HeaderComponent },
+    { 
+        path: '',
+        component: DashboardComponent,
+        children: [
+            { path: 'home', component: HomeComponent },
+            { path: 'header', component: HeaderComponent },
+        ]
+    }
 ];
 
 @NgModule({

@@ -8,6 +8,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { PrivateRoutingModule } from './private-routing.module';
 import { LoginModule } from './login/login.module';
 import { PasswordResetModule } from './password-reset/password-reset.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 // containers
 import { PrivateComponent } from './private.component';
@@ -30,6 +31,7 @@ import { SidebarComponent } from 'src/app/shared/components/sidebar/sidebar.comp
         PublicModule,
         LoginModule,
         PasswordResetModule,
+        FontAwesomeModule
     ]
 })
 export class PrivateModule { }
